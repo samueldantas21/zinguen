@@ -1,5 +1,107 @@
+/* acho q seja melhor definir o mobile e depois so ir aplicando pra desktop */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* pra tira todo tipo de fonte do programa */
+    font: inherit;
+
+    /* deixando a font um pouquinho mas suave no mozila  e outros navegadores*/
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    
+}
+:root{
+
+    /* definindo as variaveis de cores */
+    /* --brand-gradient:#FC4A1A #F7B733; */
+    --brand-color-primary:#F7B733;
+    --brand-color-secondary:#FC4A1A;
+
+    --background-color:#09090B;
+    --surface-color:#18181B;
+    --stroke-color:#27272A;
+    --text-color-secondary:#A1A1AA;
+    --text-color-primary:#F4F4F5;
+
+    /*  system-ui se nao acha o inter proucura padrao do sistema*/
+    --font-family: "Inter",system-ui, sans-serif;
+
+    
+    --fw-base:400;
+    --fw-md:500;
+    --fw-bold:800;
+   
+   
+    /* mobile */
+
+    --fs-sm:0.85rem   ;
+    --fs-base:1rem  ;
+    --fs-lg:1.25rem  ;
+    --fs-xl:1.5rem  ;
+    --fs-2xl:2.5rem  ;
+}
+
+/* defindo as fonte de todo o documento */
+html{
+    font-family: var(--font-family );
+    font-weight: var(--fw-base);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    color: var(--text-color-primary);
+
+}
+body{
+    background-color: var(--background-color);
+}
+
+/* definindo os H */
+h1,h2,h3{
+    line-height:1.2;
+    color: var(--text-color-primary);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em;
+
+}
+
+/* definindo o tamanho das fontes dos H */
+h1{
+    font-size: var(--fs-2xl);
+}
+
+h2{
+    font-size: var(--fs-xl);
+}
+
+h3{
+    font-size: var(--fs-lg);
+}
+/* definindo a  "A" */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* definindo a  Ul */
+/* esse role e pq tem alguns navegadore q quando tira os pontinho da lista nao difine mas como lista,o role serve pra dizer q sao lista pra esses navegadores defini la no html e traz pra ca */
+/* sempre bom colocar */
+ul[role="list"]{
+    list-style: none;
+}
+
+/* a font dele sempre vai ser o :root */
+/* pra quando a largura passas ou ficar igual a 80em q e o mesmo 1280px ele vai mudar o tamanhos das fonts pq q esta devenido dentrp do media   */
+/* essa aqui vai ser as fonts do desktop */
+@media (width >= 80em){
+    :root{
+        --fs-lg:2rem  ;
+        --fs-xl:3rem  ;
+        --fs-2xl:4rem  ;
+    }
 }
