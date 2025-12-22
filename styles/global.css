@@ -47,6 +47,13 @@
     --fs-lg:1.25rem  ;
     --fs-xl:1.5rem  ;
     --fs-2xl:2.5rem  ;
+
+
+    --py-base:1rem;
+    --py-lg:1.5rem;
+    --py-xl:3rem;
+
+    --px-lg:1.5rem;
 }
 
 /* defindo as fonte de todo o documento */
@@ -96,12 +103,19 @@ ul[role="list"]{
 }
 
 /* a font dele sempre vai ser o :root */
-/* pra quando a largura passas ou ficar igual a 80em q e o mesmo 1280px ele vai mudar o tamanhos das fonts pq q esta devenido dentrp do media   */
+/* pra quando a largura passas ou ficar igual a 80em q e o mesmo 1280px ele vai mudar o tamanhos das fonts q esta devenido dentro do media   */
 /* essa aqui vai ser as fonts do desktop */
 @media (width >= 80em){
     :root{
         --fs-lg:2rem  ;
         --fs-xl:3rem  ;
         --fs-2xl:4rem  ;
+
+            
+        --py-base:1.5rem;
+        --py-lg:2.5rem;
+        --py-xl:5rem;
+
+        --px-lg:2rem;
     }
 }

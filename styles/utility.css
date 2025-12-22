@@ -1,0 +1,62 @@
+
+/* defindo aos espacamento de dentro dos componentes */
+.py-base{
+    padding-block: var(--py-base);
+}
+
+.py-lg{
+    padding-block: var(--py-lg);
+}
+
+.py-xl{
+    padding-block: var(--py-xl);
+}
+
+.px-lg{
+    padding-inline: var(--px-lg);
+}
+
+ 
+ /* --max-width definindo o tamanho maximo do mobile */
+ /* parte mobile */
+.container{
+    --max-width:375px;
+
+    /* aqui ta pegando os dois lados da tela e dando um espacamento pegando o tamanho maximo da tela e subtraindo por 1.5rem q e  o px-lg  e vezes 2 e pra pegar os dois lados da tela */
+
+    width: min(var(--max-width),100% - var(--px-lg) * 2);
+
+    /* alinhado o bloco o centro basicamente isso */
+    margin-inline: auto;
+   
+    
+}
+
+
+
+.even-columns{
+    display: grid;
+    gap: 1rem;
+}
+
+
+
+/* parte do desktop */
+
+.desktop-only{
+    display: none;
+}
+
+@media (width >= 80em){
+    .container{
+        --max-width: 80rem;
+    }
+    .desktop-only{
+        display: initial;
+    }
+    .even-columns{
+       
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
