@@ -1,0 +1,48 @@
+
+/* mudando as cores do iconer  */
+a.social{
+    --bg-img:"";
+    background-image: var(--bg-img);
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+
+    -webkit-background-clip:initial;
+    background-clip: initial;
+
+    &[aria-label="tiktok"]{
+        --bg-img:url(../assentes/icones/tiktok.svg);
+
+        &:hover{
+            --bg-img:url(../assentes/icones/tiktok-hover.svg);
+        }
+    }
+    
+
+    &[aria-label="instagram"]{
+        --bg-img:url(../assentes/icones/instagram.svg);
+
+        &:hover{
+            --bg-img:url(../assentes/icones/instagram-hover.svg);
+        }
+    }
+
+    &[aria-label="twitter"]{
+        --bg-img:url(../assentes/icones/twitter-x-fill.svg);
+
+        &:hover{
+            --bg-img:url(../assentes/icones/twitter-hover.svg);
+        }
+    }
+
+    &[aria-label="discord"]{
+
+        --bg-img:url(../assentes/icones/discord.svg);
+
+        &:hover{
+            --bg-img:url(../assentes/icones/discord-hover.svg);
+        }
+    }
+
+    
+}

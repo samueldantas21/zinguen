@@ -95,6 +95,22 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+/* deeixando os icones q seja llink todos em degrader */
+a:hover{
+    background: linear-gradient(
+        90deg,
+        var(--brand-color-secondary)0%,
+        var(--brand-color-primary)100%
+        );
+        -webkit-background-clip:text;
+        background-clip: text;
+        color: transparent;
+}
+
+
+
+
 /* definindo a  Ul */
 /* esse role e pq tem alguns navegadore q quando tira os pontinho da lista nao difine mas como lista,o role serve pra dizer q sao lista pra esses navegadores defini la no html e traz pra ca */
 /* sempre bom colocar */
