@@ -1,0 +1,50 @@
+#hero{
+    text-align: center;
+
+    /* esse seletor serve pra pegar qualquer coisa q esteja dentro do img  q tenha music ou o nome da img q vc definil */
+    & img[src*="music"]{
+        width: 12.875rem;
+    }
+    & h1{
+        margin-top: 1rem;
+    }
+
+    & p{
+        font: var(--fw-md) var(--fs-lg)/1.4 var(--font-family);
+        color: var(--text-color-secondary);
+        margin-top: .5rem;
+    }
+
+    & .buttons{
+        justify-content: center;
+        margin-top: 2rem;
+    }
+  
+}
+/* desktop */
+/* configurando img pra quando for ingual o maior  de 80em ele ficar com o tamanho q foi definido a baixo */
+@media (width>=80em){
+    #hero{
+        /* colocando a img pra dektop */
+        background: url(../assentes/bg-hero-desktop.svg) no-repeat bottom center/contain;
+        
+        padding-bottom: 15rem;
+
+        & img[src*="music"]{
+        width: 25.75rem;
+        }
+        & h1 {
+            margin-top: 1.5rem;
+        }
+
+        & p{
+            margin-top: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .buttons{
+            margin-top: 3rem;
+        }
+        
+        }
+}
