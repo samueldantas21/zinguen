@@ -35,7 +35,12 @@
         var(--brand-color-secondary)0%,
         var(--brand-color-primary)100%
     );
+    /*  */
     --btn-color:var(--surface-color);
+    -webkit-background-clip:initial;
+    background-clip: initial;
+    color: var(--btn-color);
+
 }
 
 
@@ -84,4 +89,21 @@
         z-index: 1;
     }
 
+}
+/* lembrando q media ta configurando pra q se a tela for maior q 80em colocar as configuracos q estao abaixo  */
+@media (width >= 80em) {
+
+    .btn-sm{
+        padding: .75rem 1.5rem;
+        font-size: var(--fs-base);
+
+    }
+
+
+    .btn-md{
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+
+    }
+    
 }

@@ -1,0 +1,7 @@
+header{
+/* deixando o primeiro A no canto e jogando os outro pro final */
+    & a:first-child {
+        margin-right:auto ;
+    }
+
+}

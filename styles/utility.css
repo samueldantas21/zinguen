@@ -44,9 +44,21 @@
 .flex{
     display: flex;
 }
+
+.items-center {
+   align-items: center;
+
+}
+
 .gap-1{
     gap: 1rem;
 }
+
+/* tem q botar a barra pra funcionar/mas quando tiver no html nao pode ter a barra se nao,nao ler  */
+.gap-1\.5{
+    gap: 1.5rem;
+}
+
 .grid{
     display: grid;
 }
