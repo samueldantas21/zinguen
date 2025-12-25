@@ -74,6 +74,7 @@
     .container{
         --max-width: 80rem;
     }
+    /* fazendo volta pra seu valor padrao */
     .desktop-only{
         display: initial;
     }

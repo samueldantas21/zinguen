@@ -1,0 +1,35 @@
+#smartphones-img{
+    /* img de fundo q indica a cor laranja e amarelo */
+   background:url(../assentes/ilustration.svg) top/cover;
+   margin-top: 5rem;
+}
+section{
+    & header{
+        & strong{
+            /* defindo os strongs de todas as sessoes header */
+            display: block;
+            font: var(--fw-md) var(--fs-sm)/100% var(--font-family) ;
+            letter-spacing:0.08em;
+            text-transform:uppercase;
+
+            color: var(--brand-color-primary);
+        }
+
+        & h2 {
+            margin-top: .5rem;
+
+       }
+      
+    }
+     & p{
+        margin-top: .5rem;
+        color: var( --text-color-secondary);
+       }
+}
+@media (width >= 80em){
+    /* tirando a img da sessao smartphone-img */
+    #smartphones-img{
+        display: none;
+    }
+}
+
