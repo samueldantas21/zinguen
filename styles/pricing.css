@@ -1,0 +1,145 @@
+#pri{
+
+
+    --fs-pricing:2rem ;
+    & header {
+        text-align: center;
+    }
+    & .cards{
+        margin-top: 2rem;
+
+    }
+
+    & h3{
+        font-size: 1.25rem;
+        margin-top: 0;
+    }
+
+
+    & .card  p {
+        margin-top: .25rem;
+
+    }
+
+
+    & zin-pri{
+        display: block;
+        padding-block: 1.5rem;
+        font: var(--fw-bold) var(--fs-pricing)/1.2 var(--font-family) ;
+    }
+    & zin-pri small{
+        font:var(--fw-base) 1rem/125% var(--font-family);
+        color: var( --text-color-secondary);
+
+    }
+
+    & .btn {
+        width: 100%;
+        
+    }
+
+    & .separado{
+       /* criando a linha q fica de baixo do botao com um degrader */
+        height: 1px;
+        margin-block: 2rem;
+      
+        background: radial-gradient(var(--text-color-secondary),var( --surface-color) 70%);
+    }
+    & li{
+        /* colocando a img do lado das li os vzinho */
+        color: var(--text-color-secondary);
+        background: url(../assentes/icones/Check.svg) no-repeat;
+        padding-left:2rem ;
+    }
+    /* pegando o small q esta depois do ul  */
+    & ul + small {
+        /* lembra de botar o block pq ele e display inline */
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 0.875;
+        color: var(--text-color-secondary);
+
+    }
+
+    .premium{
+        position: relative;
+
+        & .card{
+            /* configurando o span */
+            padding-top: 4.25rem;
+           & > span{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            padding: .75rem 2rem;
+            background: linear-gradient(
+                90deg,
+                var(--brand-color-secondary)0%,
+                var(--brand-color-primary)
+                );
+                /* aredondando so a borda do topo do lado esquerdo */
+                border-top-left-radius: 1.5rem;
+                /* aredondando so a borda de baixo do lado direito */
+                border-bottom-right-radius: 1.5rem;
+
+                font: 600 var(--fs-sm) var(--font-family);
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                color: var(--bg-color);
+
+
+
+            } 
+        } 
+        /* criando a borda  */
+        padding: 2px;
+        &::before{
+            /* sempre tem q comecar com o content pra fazer a borda e ele serve pra inserir o conteudo antes ou depois do conteudo no caso daqui tem q ser antes */
+            content: "";
+            /* botando a cor e dando um degrade */
+            background: linear-gradient(
+                90deg,
+                var(--brand-color-secondary)0%,
+                var(--brand-color-primary)
+            ); 
+            /* definindo a Posição */
+            position: absolute;
+            /* serve pra prencher todo espaco disponivel */
+            inset: 0;
+            border-radius: 1.5rem;
+            /* pra colocar uma camada abaixo */
+            z-index: -1;
+        }
+    }
+
+
+    /* parte do desktop */
+    @media (width >= 80em) {
+
+        --fs-pri:2.5rem;
+        & header{
+            max-width: 50rem;
+            margin-inline: auto;
+        }
+
+        /* deixando o conteudo maior botando um padding-bottom */
+        .premium .card{
+            padding-bottom: 6rem;
+
+        }
+        /* dando o espacamento na linha pra deixa mas alinhado com os outros conteudos */
+        & .card:nth-child(3) .separado{
+            margin-block: 1.5rem;
+        } 
+        
+        /* so pra deixa o btao um pouco menor */
+        .btn-md{
+            padding: .75rem 1.5rem;
+            font-size: var(--fs-base);
+
+        }
+
+
+    }
+} 

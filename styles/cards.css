@@ -1,3 +1,5 @@
+
+/* definindo os card  */
 .card{
     background: var(--surface-color);
     border: 1px solid var(--stroke-color); 

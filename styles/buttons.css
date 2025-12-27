@@ -7,11 +7,11 @@
     --btn-bg-color:var(--text-color-secondary);
 
     border: 0;
-    background-color: transparent;
+   
 
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 
     /* serve pra se encaixa defntro do conteudo */
     width: fit-content;
@@ -72,7 +72,7 @@
         content: "";
         position: absolute;
         border-radius: inherit;
-        inset: 1.5px;
+        inset: 1px;
         background-color: var(--bg-color);
 
     }
