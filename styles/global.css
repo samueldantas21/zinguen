@@ -72,6 +72,8 @@ html{
     /* pra nao deixa a tela rolar pro lado */
     overflow-x: hidden;
 
+    scroll-behavior: smooth;
+
 }
 body{
     background-color: var(--bg-color);

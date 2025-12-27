@@ -1,0 +1,66 @@
+footer{
+    color: var(--text-color-secondary);
+    font-weight: var(--fw-md);
+
+    & .container{
+        padding-inline: 3rem;
+    }
+
+    & .container,
+    & .top{
+       gap: 3rem; 
+    }
+
+    /* dando espacamento em cada ul vai ver mas no mobile */
+    & nav.even-columns{
+        gap: 4rem;
+    }
+
+    /* vai ver mas nao ultima ul/ta deixando mas juntihas as ultimas,basicamente alinhando as linhas  */
+    & .top ul{
+        align-content: start;
+    }
+
+    & .title{
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--brand-color-primary);
+    }
+
+    & .bottom{
+        /* vai ver no mobile vai jogar pra baixo quando nao tiver o espaco */
+        flex-wrap: wrap;
+
+        /* ta jogando pro final deixando a div na esquerda e jogando o span pra direita/basicamente criando o espaco altomatico */
+        & > div{
+            margin-right: auto;
+            
+        }
+        & span{
+            font-size: .875rem;
+        }
+
+    }
+    @media (width >= 80em) {
+        .container{
+            padding-inline: 0;
+            padding-bottom: 2rem;
+        }
+        /* botando o nome zing pra fica mas em baixo na mesma auto das ul  */
+        & .top{
+            grid-template-columns: auto 1fr;
+            /* dando um espaco altomatico pra esquerda/ */
+            & nav{
+                margin-left: auto;
+
+                & ul{
+                    width: 14rem;
+                }
+            }
+
+        }
+
+        
+    }
+}
